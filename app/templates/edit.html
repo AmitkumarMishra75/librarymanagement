@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <style>
+        .header h1 {
+            font-weight: bolder;
+            font-size: 3rem;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+        }
+
+        .form {
+            border: 5px solid rgb(255, 157, 0);
+            padding: 1.5rem;
+        }
+
+        .fg {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .sb {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .sb button {
+            height: 3rem;
+            width: 6rem;
+            font-weight: bolder;
+            border-radius: 0.3rem;
+        }
+
+        .b1 button a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .b1 button a:hover {
+            color: white;
+        }
+
+        .b1 button:hover{
+            cursor: pointer;
+            background-color: blue;
+        }
+
+        .b2 button:hover{
+            cursor: pointer;
+            background-color: rgb(27, 105, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>Edit Book Details</h1>
+        </div>
+        <div class="form">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="fg">
+                    <label for="">Name :</label>
+                    <input type="text" name="name" id="" value="{{data2.name}}">
+                </div>
+            
+                <div class="fg">
+                    <label for="">Author :</label>
+                    <input type="text" name="author" id="" value="{{data2.author}}">
+                </div>
+            
+                <div class="fg">
+                    <label for="">Price :</label>
+                    <input type="number" name="price" id="" value="{{data2.price}}">
+                </div>
+            
+                <div class="fg">
+                    <label for="">Genre :</label>
+                    <input type="text" name="genre" id="" value="{{data2.genre}}">
+                </div>
+            
+                <div class="fg">
+                    <label for="">Quantity :</label>
+                    <input type="number" name="quantity" id="" value="{{data2.quantity}}">
+                </div>
+            
+                <div class="fg">
+                    <label for="">Rating :</label>
+                    <input type="number" name="rating" id="" value="{{data2.rating}}">
+                </div>
+            
+                <div class="sb">
+                    <div class="b1">
+                        <button>
+                            <a href="{% url 'display' data2.id %}">
+                                Back
+                            </a>
+                        </button>
+                    </div>
+                    <div class="b2">
+                        <button type="submit">Submit</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

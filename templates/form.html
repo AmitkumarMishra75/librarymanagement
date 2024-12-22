@@ -1,0 +1,45 @@
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="fg">
+        <label for="">Name :</label>
+        <input type="text" name="name" id="" value="{{data2.name}}">
+    </div>
+
+    <div class="fg">
+        <label for="">Author :</label>
+        <input type="text" name="author" id="" value="{{data2.author}}">
+    </div>
+
+    <div class="fg">
+        <label for="">Price :</label>
+        <input type="number" name="price" id="" value="{{data2.price}}">
+    </div>
+
+    <div class="fg">
+        <label for="">Genre :</label>
+        <input type="text" name="genre" id="" value="{{data2.genre}}">
+    </div>
+
+    <div class="fg">
+        <label for="">Quantity :</label>
+        <input type="number" name="quantity" id="" value="{{data2.quantity}}">
+    </div>
+
+    <div class="fg">
+        <label for="">Rating :</label>
+        <input type="number" name="rating" id="" value="{{data2.rating}}">
+    </div>
+
+    <div class="sb">
+        <div class="b1">
+            <button>
+                <a href="{% url 'index' %}">
+                    Back
+                </a>
+            </button>
+        </div>
+        <div class="b2">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</form>
