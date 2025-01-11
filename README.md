@@ -31,12 +31,22 @@ A **Library Management** web application built using **HTML**, **CSS**, **Python
 ---
 
 ## **📂 Project Structure**
-library-management/ ├── library_management/ # Main Django project │ ├── settings.py # Project settings │ ├── urls.py # URL routing for the project │ └── wsgi.py # WSGI application setup ├── app/ # Application for library management │ ├── migrations/ # Database migrations │ ├── templates/ # HTML templates │ ├── static/ # Static CSS and JS files │ ├── models.py # Models for book records │ ├── views.py # Logic for CRUD operations │ ├── forms.py # Forms for adding/editing data │ └── urls.py # Application-specific URLs └── manage.py # Django management script
+library-management/
+├── library_management/    # Main Django project  <br>
+│   ├── settings.py        # Project settings  <br>
+│   ├── urls.py            # URL routing for the project  <br>
+│   └── wsgi.py            # WSGI application setup  <br>
+├── app/                   # Main application folder for library management  <br>
+│   ├── migrations/        # Database migrations  <br>
+│   ├── templates/         # HTML templates for rendering  <br>
+│   ├── static/            # CSS, JS, and other static files  <br>
+│   ├── models.py          # Database models for book information <br> 
+│   ├── views.py           # Business logic for book CRUD operations  <br>
+│   ├── forms.py           # Custom forms for adding/editing book data  <br>
+│   └── urls.py            # App-specific routing configuration  <br>
+└── manage.py              # Django management script  <br>
 
-yaml
-Copy code
 
----
 
 ## **🚦 Application Flow**
 ### **Key Views** (`views.py`):
