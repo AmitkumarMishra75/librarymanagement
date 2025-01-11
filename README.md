@@ -31,7 +31,7 @@ A **Library Management** web application built using **HTML**, **CSS**, **Python
 ---
 
 ## **📂 Project Structure**
-library-management/
+
 ├── library_management/    # Main Django project  <br>
 │   ├── settings.py        # Project settings  <br>
 │   ├── urls.py            # URL routing for the project  <br>
